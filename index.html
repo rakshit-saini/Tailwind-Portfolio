@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth ">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rakshit-Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind.config.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Ovo&display=swap" rel="stylesheet">
+</head>
+
+<body class="overflow-x-hidden font-Outfit dark:bg-darkTheme dark:text-white">
+
+    <div class="w-11/12 fixed top-0 right-0 -z-10 translate-y-[-60%] dark:hidden">
+        <img src="./images/header-bg-color.png" class="w-full" alt="">
+    </div>
+
+
+
+    <nav class="w-full fixed px-5 lg:px-8 xl:px-[8%] py-4 flex items-center justify-between z-50 ">
+        <img src="./images/logo.png" class="w-28 cursor-pointer mr-14 dark:hidden" alt="logo">
+        <img src="./images/logo_dark.png" class="w-28 cursor-pointer mr-14 hidden dark:block" alt="logo">
+
+
+        <ul class="hidden md:flex items-center gap-6 lg:gap-8 rounded-full px-12 py-3 bg-white shadow-sm bg-opacity-50 font-Ovo">
+            <li><a href="#top">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#work">My Work</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+        </ul>
+
+        <div class="flex items-center gap-4">
+            <button onclick="toggleTheme()">
+                <img src="./images/moon_icon.png" class="w-6 dark:hidden" alt="">
+                <img src="./images/sun_icon.png" class="w-6 hidden dark:block" alt="">
+            </button>
+
+            <a href="#contact"
+                class="hidden lg:flex items-center gap-3 px-10 py-2.5 border border-gray-500 rounded-full ml-4 font-Ovo  dark:border-white">Contact
+                <img src="./images/arrow-icon.png" class="w-3 dark:hidden" alt="Arrow">
+                <img src="./images/arrow-icon-dark.png" class="w-3 hidden dark:block" alt="Arrow">
+            
+            </a>
+
+            <button class="block md:hidden ml-3" onclick="openMenu()">
+                <img src="./images/menu-black.png" class="w-6 dark:hidden" alt="">
+                <img src="./images/menu-white.png" class="w-6 hidden dark:block" alt="">
+            </button>
+
+        </div>
+
+        <!-- <----------  Mobile Menu ------------>
+
+        <ul id="sideMenu"
+            class="flex md:hidden flex-col py-20 px-10 fixed -right-64 top-0 bottom-0 w-64 gap-4 z-50 h-screen bg-rose-50 transition duration-500 font-Ovo dark:bg-[#2a004a] ">
+
+            <div>
+                <button class="absolute right-6 top-6" onclick="closeMenu()">
+                    <img src="./images/close-black.png" class="dark:hidden cursor-pointer w-5 " alt=""></button>
+                    <img src="./images/close-white.png" class="hidden dark:block w-5 cursor-pointer absolute right-6 top-6" onclick="closeMenu()" alt=""></button>
+            </div>
+
+            <li><a href="#top" onclick="closeMenu()">Home</a></li>
+            <li><a href="#about" onclick="closeMenu()">About</a></li>
+            <li><a href="#services" onclick="closeMenu()">Services</a></li>
+            <li><a href="#work" onclick="closeMenu()">My Work</a></li>
+            <li><a href="#contact" onclick="closeMenu()">Contact Me</a></li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ---------------------------------- HEADER ------------------------ -->
+
+    <div class="w-11/12 max-w-3xl text-center mx-auto h-screen flex flex-col items-center justify-center gap-4 mb-24">
+        <img src="./images/profile-img.png" alt="" class="w-32 rounded-full mt-36">
+        <h3 class="flex items-center gap-2 text-xl md:text-2xl mb-3 font-Ovo">Hii! I'm Elina Jade <img
+                src="./images/hand-icon.png" alt="" class="w-6"></h3>
+        <h1 class="text-3xl sm:text-6xl lg:text-[66px] font-Ovo">Fronend web developer based in London.</h1>
+        <p class="max-w-2xl mx-auto font-Ovo"> I am frontend developer from California, USA with 10 years of experience in
+            multiple companies like Apple, Tesla and Microsoft. </p>
+        <div class="flex flex-col sm:flex-row items-center gap-4 mt-4">
+
+
+            <a href="#contact"
+                class="px-10 py-3 border rounded-full bg-gradient-to-r from-[#b820e6] to-[#da7d20] text-white flex items-center gap-2">Contact
+                Me <img src="./images/right-arrow-white.png" class="w-4 text-center" alt=""></a>
+            <a href="./images/logo.png" download
+                class="px-10 py-3 border rounded-full border-slate-500 text-black flex items-center gap-2 dark:text-black bg-white">My Resume
+                <img src="./images/download-icon.png" class="w-4 text-center" alt=""></a>
+        </div>
+    </div>
+
+
+    <!-- ------------------------------ABOUT ME---------------------------- -->
+
+    <div id="about" class="w-full py-10 px-[12%]">
+        <h4 class="text-center text-lg mb-2 font-Ovo">Introduction</h4>
+        <h2 class="text-center text-5xl font-Ovo">About Me</h2>
+
+        <div class="w-full flex flex-col lg:flex-row items-center gap-20 my-20">
+            <div class="max-w-max relative mx-auto">
+                <img src="./images/user-image.png" class="w-64 sm:w-80 rounded-3xl max-w-none">
+
+
+
+            </div>
+            <div class="flex-1">
+                <p class="max-w-2xl mb-10 ">
+                    I am an experienced Frontend Developer with over a decade of professional expertise in this field.
+                    Throughout my career I have had the privilage of colabrating with prestigious orgnizations
+                    contibuting their success and growth
+                </p>
+
+                <ul class="grid grid-cols-1 sm:grid-cols-auto gap-3 max-w-2xl ">
+                    <li
+                        class="border-[0.5px] border-gray-400 p-5 rounded-xl cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000]">
+                        <img src="./images/code-icon.png" class="w-7 mt-3" alt="">
+                        <h3 class="my-4 font-semibold text-gray-700 ">Languages</h3>
+                        <p class="text-gray-600 text-sm ">HTML,CSS,JAVASCRIPT, REACT JS, NEXT JS</p>
+                    </li>
+
+                    <li
+                        class="border-[0.5px] border-gray-400 p-6 rounded-xl cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000]">
+                        <img src="./images/edu-icon.png" class="w-7 mt-3" alt="">
+                        <h3 class="my-4 font-semibold text-gray-700 ">Education</h3>
+                        <p class="text-gray-600 text-sm ">B Tech in computor science</p>
+                    </li>
+
+                    <li
+                        class="border-[0.5px] border-gray-400 p-6 rounded-xl cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000]">
+                        <img src="./images/project-icon.png" class="w-7 mt-3" alt="">
+                        <h3 class="my-4 font-semibold text-gray-700">Projects</h3>
+                        <p class="text-gray-600 text-sm ">Built more than 5 projects</p>
+                    </li>
+                </ul>
+
+                <h1 class="my-6 text-gray-700 dark:text-white">Tools i use</h1>
+
+                <ul class="flex items-center gap-3 sm:gap-5">
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500">
+                        <img class="p-2" src="./images/vscode.png" alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500">
+                        <img class="p-2" src="./images/firebase.png" alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500">
+                        <img class="p-2" src="./images/mongodb.png" alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500">
+                        <img class="p-2" src="./images/figma.png" alt="">
+                    </li>
+
+                    <li
+                        class="flex items-center justify-center w-12 sm:w-14 aspect-square border border-gray-400 rounded-lg cursor-pointer hover:translate-y-1 duration-500">
+                        <img class="p-2" src="./images/git.png" alt="">
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ------------------ Services----------------- -->
+
+    <div id="services" class="w-full px-[12%]  py-10 scroll-mt-20 ">
+        <h4 class="text-center text-lg mb-2 font-Ovo">What i offfer</h4>
+        <h2 class="text-center text-5xl font-Ovo">My Services</h2>
+        <p class="text-center max-w-2xl  mx-auto mt-5 mb-12"> I am frontend developer from California, USA
+            with 10 years of experience in
+            multiple companies like Apple, Tesla and Microsoft.
+        </p>
+
+        <div class=" grid grid-cols-auto gap-6 my-10">
+        <div class="border border-gray-400 rounded-lg py-12 px-8 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000] dark:hover:text-black">
+            <img src="./images/web-icon.png" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">Web design</h3>
+            <p class="text-sm text-gray-600 leading-5 ">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center mt-5 gap-2 text-sm "> Read more<img class="w-4" src="./images/right-arrow.png" alt=""></a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg py-12 px-8 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000] dark:hover:text-black">
+            <img src="./images/mobile-icon.png" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">Mobile App</h3>
+            <p class="text-sm text-gray-600 leading-5 ">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center mt-5 gap-2 text-sm"> Read more<img class="w-4" src="./images/right-arrow.png" alt=""></a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg py-12 px-8 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000] dark:hover:text-black">
+            <img src="./images/ui-icon.png" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">UI/UX Design</h3>
+            <p class="text-sm text-gray-600 leading-5 ">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center mt-5 gap-2 text-sm"> Read more<img class="w-4" src="./images/right-arrow.png" alt=""></a>
+        </div>
+
+        <div class="border border-gray-400 rounded-lg py-12 px-8 cursor-pointer hover:bg-[#fcf4ff] hover:translate-y-1 duration-500 hover:shadow-[4px_4px_0px_#000] dark:hover:text-black">
+            <img src="./images/graphics-icon.png" class="w-10">
+            <h3 class="text-lg my-4 text-gray-700 ">Graphics Design</h3>
+            <p class="text-sm text-gray-600 leading-5 ">Web development is the process of building, programming...</p>
+            <a href="" class="flex items-center mt-5 gap-2 text-sm "> Read more<img class="w-4" src="./images/right-arrow.png" alt=""></a>
+        </div>
+    </div>
+
+    </div>
+
+<!-- -------------------My work------------------------ -->
+
+
+<div id="work" class="w-full px-[12%]  py-10 scroll-mt-20">
+    <h4 class="text-center text-lg mb-2 font-Ovo">My Portfolio</h4>
+    <h2 class="text-center text-5xl font-Ovo">My Latest Work</h2>
+    <p class="text-center max-w-2xl  mx-auto mt-5 mb-12">Welcome to my web development portfolio! explore a collection of projects showcasing my expertise in Frontend development 
+    </p>
+
+    <div class="grid grid-cols-auto my-10 gap-5">
+        <div class="aspect-square bg-[url('./images/work-1.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+
+
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 ">
+                <div class="">
+                    <h2 class="font-semibold dark:text-black">Frontend project</h2>
+                    <p class="text-sm text-gray-700">Web design</p>
+                </div>
+                <div class=" border rounded-full border-black aspect-square w-9 flex items-center justify-center shadow-[2px_2px_0px]">
+                    <img src="./images/send-icon.png" class="w-5" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="aspect-square bg-[url('./images/work-2.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 ">
+                <div class="">
+                    <h2 class="font-semibold dark:text-black">React Native</h2>
+                    <p class="text-sm text-gray-700">Netflix App</p>
+                </div>
+                <div class=" border rounded-full border-black aspect-square w-9 flex items-center justify-center shadow-[2px_2px_0px]">
+                    <img src="./images/send-icon.png" class="w-5" alt="">
+                </div>
+            </div>
+        </div>
+
+        <div class="aspect-square bg-[url('./images/work-3.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 ">
+                <div class="">
+                    <h2 class="font-semibold dark:text-black">UI/UX project</h2>
+                    <p class="text-sm text-gray-700">Tesla Recreation</p>
+                </div>
+                <div class=" border rounded-full border-black aspect-square w-9 flex items-center justify-center shadow-[2px_2px_0px]">
+                    <img src="./images/send-icon.png" class="w-5" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="aspect-square bg-[url('./images/work-4.png')] bg-no-repeat bg-cover bg-center rounded-lg relative cursor-pointer group">
+            <div class="bg-white w-10/12 rounded-md absolute bottom-5 left-1/2 -translate-x-1/2 py-3 px-5 flex items-center justify-between duration-500 group-hover:bottom-7 ">
+                <div class="">
+                    <h2 class="font-semibold dark:text-black">Saas project</h2>
+                    <p class="text-sm text-gray-700">Problem solving</p>
+                </div>
+                <div class=" border rounded-full border-black aspect-square w-9 flex items-center justify-center shadow-[2px_2px_0px]">
+                    <img src="./images/send-icon.png" class="w-5" alt="">
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+
+</div>
+
+<!-- ----------------------contact------------------------ -->
+
+
+
+<div id="contact" class="w-full px-[12%]  py-10 scroll-mt-20 bg-[url('./images/footer-bg-color.png')] bg-no-repeat bg-[length:90%_auto] bg-center dark:bg-none">
+    <h4 class="text-center text-lg mb-2 font-Ovo">Contact with me</h4>
+    <h2 class="text-center text-5xl font-Ovo">Get in touch</h2>
+    <p class="text-center max-w-2xl  mx-auto mt-5 mb-12">
+        I'd love to hear from you! If you have any Question, comment, or feedback please use the form below 
+    </p>
+
+    <form action="" class="max-w-2xl mx-auto">
+        <div class="grid grid-cols-auto gap-6 mt-10 mb-8">
+            <input type="text" placeholder="Enter your Name " class="flex-1 p-3 outline-none border border-gray-400 rounded-md bg-white text-black">
+            <input type="text" placeholder="Enter your Email " class="flex-1 p-3 outline-none border border-gray-400 rounded-md bg-white text-black">
+
+        </div>
+        <textarea name="" rows="6" id="" placeholder="Enter Your Message" class="w-full p-4 outline-none border border-gray-400 mb-6 rounded-md bg-white text-black"></textarea>
+        <button class="px-8 py-3 flex items-center justify-between gap-2 bg-black/80 rounded-full mx-auto w-max hover:bg-black duration-500 text-white">Submit Now
+            <img src="./images/right-arrow-white.png" class="w-5 text-center">
+        </button>
+    </form>
+</div>
+
+<!-- ------------------------------------footer------------------------ -->
+
+<div class="mt-20">
+    <div class="text-center ">
+        <img src="./images/logo.png" class="w-36  mx-auto  cursor-pointer mb-2 dark:hidden  " alt="">
+        <img src="./images/logo_dark.png" class="w-36  mx-auto  cursor-pointer mb-2 hidden dark:block " alt="">
+        <div class="w-max items-center gap-2 mx-auto">
+            
+            rakshitsaini1809@gmail.com
+        </div>
+    </div>
+    <div class="text-center sm:flex items-center justify-between border-t border-gray-500 mx-[10%] my-12 py-6">
+        <p>&copy; 2024 Elina Jade . All rights reserved </p>
+        <ul class="flex gap-10 justify-center items-center">
+            <li><a href="https://instagram.com/rakshit.1809">Instagram</a></li>
+            <li><a href="https://instagram.com/rakshit.1809">Github</a></li>
+            <li><a href="https://instagram.com/rakshit.1809">Linkedin</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
